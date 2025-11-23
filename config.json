@@ -1,0 +1,19 @@
+{
+    "theme": "dark",
+    "window_size": [
+        1920,
+        1061
+    ],
+    "window_position": [
+        8,
+        0
+    ],
+    "resolution": "fhd",
+    "notifications": true,
+    "log_settings": {
+        "retention_days": 111,
+        "send_logs": false,
+        "log_server_ip": "",
+        "log_server_port": "514"
+    }
+}

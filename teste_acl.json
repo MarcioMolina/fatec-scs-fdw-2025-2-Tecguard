@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "flamengo",
+        "comeco_ip": "192.168.0.200",
+        "final_ip": "192.168.0.205",
+        "protocolo": "tcp",
+        "direcao": "in",
+        "acao": "PERMITIR",
+        "portas": "80",
+        "descricao": "ACL criada pelo sistema. IPs: 192.168.0.200-192.168.0.205"
+    },
+    {
+        "nome": "porpeta",
+        "comeco_ip": "192.168.0.38",
+        "final_ip": "192.168.0.39",
+        "protocolo": "tcp",
+        "direcao": "in",
+        "acao": "PERMITIR",
+        "portas": "80",
+        "descricao": "ACL criada pelo sistema. IPs: 192.168.0.34-192.168.0.36"
+    }
+]

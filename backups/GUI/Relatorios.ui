@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget_relatorio">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1881</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>313</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Data do evento</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Evento</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>IP</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Porta</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Serviço</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Sugestão</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>255</red>
+       <green>215</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>895</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_Verlogs">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(54,54,54);
+color: white</string>
+       </property>
+       <property name="text">
+        <string>Ver Logs</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_relatrio">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(54,54,54);
+color: white</string>
+       </property>
+       <property name="text">
+        <string>Fazer relatório</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(54,54,54)</string>
+   </property>
+   <widget class="QMenu" name="menuHome">
+    <property name="title">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPoliticas">
+    <property name="title">
+     <string>Políticas</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuConexoes">
+    <property name="title">
+     <string>Conexões</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuRelatorios">
+    <property name="title">
+     <string>Relatórios</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuConfiguraoes">
+    <property name="title">
+     <string>Configurações</string>
+    </property>
+   </widget>
+   <addaction name="menuHome"/>
+   <addaction name="menuPoliticas"/>
+   <addaction name="menuConexoes"/>
+   <addaction name="menuRelatorios"/>
+   <addaction name="menuConfiguraoes"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

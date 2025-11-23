@@ -1,0 +1,111 @@
+{"timestamp": "2025-11-22T02:33:50.540081", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:33:50.936918", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:33:51.299312", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:33:52.060591", "event": "Interface de rede selecionada", "classification": "Informativo", "service": "Network", "additional_data": {"interface": "Ethernet"}}
+{"timestamp": "2025-11-22T02:33:52.061592", "event": "Firewall inicializado com sucesso", "classification": "Informativo", "service": "Firewall"}
+{"timestamp": "2025-11-22T02:33:53.388385", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:33:55.388387", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:33:57.391437", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:33:59.382470", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:01.390495", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:01.423648", "event": "Tema alterado", "classification": "Informativo", "service": "UI Configuration", "additional_data": {"old_theme": "white", "new_theme": "dark"}}
+{"timestamp": "2025-11-22T02:34:02.669051", "event": "Reiniciando aplica\u00e7\u00e3o", "classification": "Informativo", "service": "Application Lifecycle"}
+{"timestamp": "2025-11-22T02:34:02.673051", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:34:07.456894", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:07.869296", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:08.239195", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:34:08.923408", "event": "Interface de rede selecionada", "classification": "Informativo", "service": "Network", "additional_data": {"interface": "Ethernet"}}
+{"timestamp": "2025-11-22T02:34:08.924416", "event": "Firewall inicializado com sucesso", "classification": "Informativo", "service": "Firewall"}
+{"timestamp": "2025-11-22T02:34:10.330900", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:12.321319", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:12.406518", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:34:14.325218", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:54.706395", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:55.116437", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:55.479239", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:34:56.203108", "event": "Interface de rede selecionada", "classification": "Informativo", "service": "Network", "additional_data": {"interface": "Ethernet"}}
+{"timestamp": "2025-11-22T02:34:56.203108", "event": "Firewall inicializado com sucesso", "classification": "Informativo", "service": "Firewall"}
+{"timestamp": "2025-11-22T02:34:57.570142", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:34:59.566724", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:01.577406", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:02.058390", "event": "Per\u00edodo de reten\u00e7\u00e3o de logs alterado", "classification": "Informativo", "service": "Log Management", "additional_data": {"retention_days": 5}}
+{"timestamp": "2025-11-22T02:35:03.574548", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:05.124770", "event": "Per\u00edodo de reten\u00e7\u00e3o de logs alterado", "classification": "Informativo", "service": "Log Management", "additional_data": {"retention_days": 15}}
+{"timestamp": "2025-11-22T02:35:05.576820", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:06.655239", "event": "Envio de logs ativado", "classification": "Informativo", "service": "Log Management"}
+{"timestamp": "2025-11-22T02:35:07.569527", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:07.664695", "event": "Envio de logs desativado", "classification": "Informativo", "service": "Log Management"}
+{"timestamp": "2025-11-22T02:35:08.611275", "event": "Envio de logs ativado", "classification": "Informativo", "service": "Log Management"}
+{"timestamp": "2025-11-22T02:35:09.373161", "event": "Envio de logs desativado", "classification": "Informativo", "service": "Log Management"}
+{"timestamp": "2025-11-22T02:35:09.566556", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:11.569310", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:13.576234", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:15.577975", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:17.584439", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:19.597702", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:21.594469", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:23.586463", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:25.584920", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:27.593037", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:29.593107", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:31.586080", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:33.593506", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:35.584819", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:37.590965", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:39.584965", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:41.589071", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:43.584644", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:45.597125", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:47.583883", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:49.596117", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:51.587149", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:53.585438", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:55.591241", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:57.592280", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:35:59.583521", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:01.587804", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:03.593800", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:05.596578", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:07.596805", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:09.583890", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:11.589592", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:13.590808", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:15.593724", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:17.594372", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:19.598336", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:21.586191", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:23.591862", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:25.583786", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:27.581712", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:29.588203", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:31.585699", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:33.580598", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:35.585691", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:37.586751", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:37.917805", "event": "Tema alterado", "classification": "Informativo", "service": "UI Configuration", "additional_data": {"old_theme": "dark", "new_theme": "white"}}
+{"timestamp": "2025-11-22T02:36:38.784315", "event": "Reiniciando aplica\u00e7\u00e3o", "classification": "Informativo", "service": "Application Lifecycle"}
+{"timestamp": "2025-11-22T02:36:38.788826", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:36:44.457922", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:44.803658", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:45.048890", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:36:46.033837", "event": "Interface de rede selecionada", "classification": "Informativo", "service": "Network", "additional_data": {"interface": "Ethernet"}}
+{"timestamp": "2025-11-22T02:36:46.033837", "event": "Firewall inicializado com sucesso", "classification": "Informativo", "service": "Firewall"}
+{"timestamp": "2025-11-22T02:36:47.202600", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:49.127350", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:50.389295", "event": "Tema alterado", "classification": "Informativo", "service": "UI Configuration", "additional_data": {"old_theme": "white", "new_theme": "dark"}}
+{"timestamp": "2025-11-22T02:36:51.129126", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:36:51.855103", "event": "Reiniciando aplica\u00e7\u00e3o", "classification": "Informativo", "service": "Application Lifecycle"}
+{"timestamp": "2025-11-22T02:36:51.859282", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:37:02.715579", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:03.086870", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:03.351462", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:37:04.054023", "event": "Interface de rede selecionada", "classification": "Informativo", "service": "Network", "additional_data": {"interface": "Ethernet"}}
+{"timestamp": "2025-11-22T02:37:04.054023", "event": "Firewall inicializado com sucesso", "classification": "Informativo", "service": "Firewall"}
+{"timestamp": "2025-11-22T02:37:05.511253", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:07.451825", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:09.455410", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:11.442326", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:12.530229", "event": "\u00cdcone da bandeja configurado", "classification": "Informativo", "service": "UI"}
+{"timestamp": "2025-11-22T02:37:13.445648", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:15.447074", "event": "Processo 20316: process PID not found (pid=20316)", "classification": "Erro", "service": "Process Management"}
+{"timestamp": "2025-11-22T02:37:16.075345", "event": "Aplicativo sendo encerrado", "classification": "Informativo", "service": "Application Lifecycle"}

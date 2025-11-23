@@ -1,0 +1,6 @@
+ACL Block Log
+==================================================
+{"timestamp": "2025-05-14T18:11:27.056703", "ip": "104.208.16.92", "reason": "Port scan", "source": "FirewallCore", "action": "blocked"}
+{"timestamp": "2025-05-14T18:16:03.979100", "ip": "162.159.133.233", "reason": "DDoS (Largura de Banda) detectado: 162.159.133.233 - 0.50 Mbps", "source": "FirewallCore", "action": "blocked"}
+{"timestamp": "2025-05-14T18:17:05.256295", "ip": "34.104.35.123", "reason": "DDoS (Largura de Banda) detectado: 34.104.35.123 - 0.50 Mbps", "source": "FirewallCore", "action": "blocked"}
+{"timestamp": "2025-05-16T17:39:51.437075", "ip": "192.168.15.65", "reason": "DDoS (Largura de Banda): 0.50 Mbps", "source": "FirewallCore", "action": "blocked"}

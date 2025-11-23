@@ -1,0 +1,13 @@
+==================================================
+Relatório do Firewall - 2025-05-12 18:12:12
+==================================================
+
+Estatísticas:
+{
+    "packets_processed": 942,
+    "ja3_matches": 0,
+    "yara_matches": 0,
+    "dpi_alerts": 0,
+    "ips_blocked": 0,
+    "last_alert": null
+}

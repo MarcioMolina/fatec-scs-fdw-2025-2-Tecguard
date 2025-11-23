@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;
+color: white;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_background">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>30</y>
+      <width>1422</width>
+      <height>800</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/imgbackground.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>531</width>
+      <height>215</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_CriacaoACL">
+     <item>
+      <widget class="QLabel" name="label_CriacaoACL">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(244, 203, 0);
+font-size: 25px</string>
+       </property>
+       <property name="text">
+        <string>Criação de ACLs</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="horizontalWidget_CriacaoACL" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QFrame" name="verticalFrame_nomeOpes">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_nomeACL">
+             <property name="text">
+              <string>Nome da ACL:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_comecoIP">
+             <property name="text">
+              <string>Começo do bloco IP:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_FinalIP">
+             <property name="text">
+              <string>Final do bloco IP:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_Protocolo">
+             <property name="text">
+              <string>Protocolo:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_Direcao">
+             <property name="text">
+              <string>Direção</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="verticalWidget_opcoes" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_nomeACL">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_comecoIP">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_FinalIP"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_protocolo">
+             <item>
+              <property name="text">
+               <string>TCP</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>UDP</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_direcao">
+             <item>
+              <property name="text">
+               <string>IN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OUT</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>230</y>
+      <width>531</width>
+      <height>284</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_Servicos">
+     <item row="1" column="1">
+      <widget class="QCheckBox" name="checkBox_FTP">
+       <property name="text">
+        <string>FTP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QCheckBox" name="checkBox_RPC">
+       <property name="text">
+        <string>RPC </string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="label_servicos">
+       <property name="text">
+        <string>Serviços:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="checkBox_NetBIOS">
+       <property name="text">
+        <string>NetBIOS </string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="checkBox_HTTP">
+       <property name="text">
+        <string>HTTP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="checkBox_SSH">
+       <property name="text">
+        <string>SSH</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QCheckBox" name="checkBox_Telnet">
+       <property name="text">
+        <string>Telnet</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QCheckBox" name="checkBox_DNS">
+       <property name="text">
+        <string>DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QCheckBox" name="checkBox_SNMP">
+       <property name="text">
+        <string>SNMPv1/v2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QCheckBox" name="checkBox_iCMP">
+       <property name="text">
+        <string>ICMP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_outros">
+       <property name="text">
+        <string>Outros:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="lineEdit_outros">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_TabACL">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>550</y>
+      <width>899</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(244, 203, 0);
+font-size: 25px</string>
+    </property>
+    <property name="text">
+     <string>Tabela de ACLs</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>600</y>
+      <width>902</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>150</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Nome</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Começo do bloco</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Fim do bloco</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Protocolo</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Direção</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Serviços</string>
+     </property>
+     <property name="background">
+      <color>
+       <red>54</red>
+       <green>54</green>
+       <blue>54</blue>
+      </color>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(54,54,54)</string>
+   </property>
+   <widget class="QMenu" name="menuHome">
+    <property name="title">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPoliticas">
+    <property name="title">
+     <string>Políticas</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuConexoes">
+    <property name="title">
+     <string>Conexões</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuRelatorio">
+    <property name="title">
+     <string>Relatório</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuConfiguraoes">
+    <property name="title">
+     <string>Configurações</string>
+    </property>
+   </widget>
+   <addaction name="menuHome"/>
+   <addaction name="menuPoliticas"/>
+   <addaction name="menuConexoes"/>
+   <addaction name="menuRelatorio"/>
+   <addaction name="menuConfiguraoes"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

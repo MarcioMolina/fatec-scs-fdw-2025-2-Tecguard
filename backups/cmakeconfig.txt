@@ -1,0 +1,293 @@
+cmake_minimum_required(VERSION 3.10)
+project(meumodulo)
+
+# Encontrar o pacote pybind11 (pode precisar ser instalado separadamente)
+find_package(pybind11 REQUIRED)
+
+# Criar uma biblioteca compartilhada (módulo Python)
+add_library(meumodulo MODULE main.cpp)
+
+# Ligar a biblioteca ao pybind11
+target_link_libraries(meumodulo PRIVATE pybind11::module)
+
+\\
+
+min_width, min_height, max_width, max_height = calculate_window_size(min_percent=1, max_percent=100)
+        # Aplica os tamanhos mínimo e máximo à janela
+
+caminho_interfaces = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "interfaces"))
+sys.path.append(caminho_interfaces)
+
+
+if download_kbs > 1024**3:
+                            self.ui.table_Conexoes.setItem(row, 6, QTableWidgetItem(f"{download_kbs/(1024**3):.2f} GB/s"))
+                        elif download_kbs > 1024**2:
+                            self.ui.table_Conexoes.setItem(row, 6, QTableWidgetItem(f"{download_kbs/(1024**2):.1f} MB/s"))
+                        else:
+                            self.ui.table_Conexoes.setItem(row, 6, QTableWidgetItem(f"{download_kbs:.2f} KB/s"))
+
+                        if upload_kbs > 1024**3:
+                            self.ui.table_Conexoes.setItem(row, 5, QTableWidgetItem(f"{upload_kbs/(1024**3):.2f} GB/s"))
+                            
+                        elif upload_kbs > 1024**2:
+                            self.ui.table_Conexoes.setItem(row, 5, QTableWidgetItem(f"{upload_kbs/(1024**2):.2f} MB/s"))
+                        else:
+                            self.ui.table_Conexoes.setItem(row, 5, QTableWidgetItem(f"{upload_kbs:.2f} KB/s"))
+
+
+                        print("upload",upload_kbs)
+                        print(type(upload_kbs))
+                        print("Downlaod", download_kbs)
+                        print(type(download_kbs))
+
+                        if download_kbs >= 1024.0:
+                            self.ui.table_Conexoes.setItem(row, 6, QTableWidgetItem(f"{download_kbs/1024:.2f} MB/s"))
+                        else:
+                            self.ui.table_Conexoes.setItem(row, 6, QTableWidgetItem(f"{download_kbs:.2f} KB/s"))
+
+                        if upload_kbs >= 1024.0:
+                            self.ui.table_Conexoes.setItem(row, 5, QTableWidgetItem(f"{upload_kbs/1024:.2f} MB/s"))
+                            
+                        else:
+                            self.ui.table_Conexoes.setItem(row, 5, QTableWidgetItem(f"{upload_kbs:.2f} KB/s"))
+
+                        #print(f"[DEBUG] PID {pid} - Upload: {current_upload} bytes, Download: {current_download} bytes")
+
+
+
+
+
+
+def populate_acls_table(self):
+        """Preenche a tabela com todas as regras do Windows Firewall"""
+        try:
+            # Conectar ao Windows Firewall
+            fw_policy = win32com.client.Dispatch("HNetCfg.FwPolicy2")
+            rules = fw_policy.Rules
+            
+            # Limpar a tabela
+            self.ui.tableWidget_2.setRowCount(0)
+            
+            # Para cada regra no firewall
+            for rule in rules:
+                # Criar uma nova linha na tabela
+                row = self.ui.tableWidget_2.rowCount()
+                self.ui.tableWidget_2.insertRow(row)
+                
+                # Obter informações básicas
+                name = rule.Name
+                remote_ips = rule.RemoteAddresses
+                protocol = self._get_protocol_name(rule.Protocol)
+                direction = "IN" if rule.Direction == 1 else "OUT"
+                action = "PERMITIR" if rule.Action == 1 else "BLOQUEAR"
+                ports = rule.LocalPorts if rule.LocalPorts else "Todos"
+                
+                # Tratar intervalos de IP
+                if "-" in remote_ips:
+                    start_ip, end_ip = remote_ips.split("-")
+                elif "," in remote_ips:
+                    start_ip = remote_ips.split(",")[0]
+                    end_ip = remote_ips.split(",")[-1]
+                else:
+                    start_ip = remote_ips
+                    end_ip = remote_ips
+                
+                # Adicionar itens à tabela
+                self.ui.tableWidget_2.setItem(row, 0, QTableWidgetItem(name))
+                self.ui.tableWidget_2.setItem(row, 1, QTableWidgetItem(start_ip))
+                self.ui.tableWidget_2.setItem(row, 2, QTableWidgetItem(end_ip))
+                self.ui.tableWidget_2.setItem(row, 3, QTableWidgetItem(protocol))
+                self.ui.tableWidget_2.setItem(row, 4, QTableWidgetItem(direction))
+                self.ui.tableWidget_2.setItem(row, 5, QTableWidgetItem(action))
+                self.ui.tableWidget_2.setItem(row, 6, QTableWidgetItem(ports))
+                
+                # Colorir regras criadas pelo nosso sistema
+                if "ACL criada pelo sistema" in rule.Description:
+                    for col in range(7):
+                        item = self.ui.tableWidget_2.item(row, col)
+                        if item:
+                            item.setBackground(QColor(200, 255, 200))
+                
+                # Colorir regras de bloqueio
+                if rule.Action == 0:  # Bloqueio
+                    for col in range(7):
+                        item = self.ui.tableWidget_2.item(row, col)
+                        if item:
+                            item.setForeground(QColor(255, 0, 0))
+            
+            # Configurar cabeçalhos
+            headers = ["Nome", "IP Início", "IP Fim", "Protocolo", "Direção", "Ação", "Portas"]
+            self.ui.tableWidget_2.setHorizontalHeaderLabels(headers)
+            self.ui.tableWidget_2.setColumnWidth(0, 150)
+            self.ui.tableWidget_2.setColumnWidth(6, 100)
+            self.ui.tableWidget_2.setSortingEnabled(True)
+            
+        except Exception as e:
+            QMessageBox.critical(self.ui, "Erro", f"Não foi possível carregar as ACLs:\n{str(e)}")
+
+
+
+
+
+
+
+
+
+
+
+# --- Estatísticas de Tamanho (Medium Cost) ---
+        'Fwd Pkt Len Max': max(flow['fwd_pkt_lens'] or [0]),  # ⚡⚡ Cuidado com listas vazias
+        'Fwd Pkt Len Min': min(flow['fwd_pkt_lens'] or [0]),  # ⚡⚡
+        'Fwd Pkt Len Mean': np.mean(flow['fwd_pkt_lens']) if flow['fwd_pkt_lens'] else 0,  # ⚡⚡
+        'Bwd Pkt Len Max': max(flow['bwd_pkt_lens'] or [0]),  # ⚡⚡
+        'Bwd Pkt Len Min': min(flow['bwd_pkt_lens'] or [0]),  # ⚡⚡
+        'Bwd Pkt Len Mean': np.mean(flow['bwd_pkt_lens']) if flow['bwd_pkt_lens'] else 0,  # ⚡⚡
+        'Pkt Len Min': min((flow['fwd_pkt_lens'] + flow['bwd_pkt_lens']) or [0]),  # ⚡⚡
+        'Pkt Len Max': max((flow['fwd_pkt_lens'] + flow['bwd_pkt_lens']) or [0]),  # ⚡⚡
+        
+        # --- Throughput (High Cost) ---
+        'Flow Byts/s': (flow['fwd_bytes'] + flow['bwd_bytes']) / max(time.time() - flow['start_time'], 0.001),  # ⚡⚡⚡
+        'Flow Pkts/s': (flow['fwd_pkts'] + flow['bwd_pkts']) / max(time.time() - flow['start_time'], 0.001),  # ⚡⚡⚡
+        'Fwd Pkts/s': flow['fwd_pkts'] / max(time.time() - flow['start_time'], 0.001),  # ⚡⚡⚡
+        'Bwd Pkts/s': flow['bwd_pkts'] / max(time.time() - flow['start_time'], 0.001),  # ⚡⚡⚡
+        
+        # --- Intervalos (Very High Cost) ---
+        'Flow IAT Mean': np.mean(flow['iat']) if flow['iat'] else 0,  # ⚡⚡⚡⚡
+        'Flow IAT Std': np.std(flow['iat']) if flow['iat'] else 0,  # ⚡⚡⚡⚡ (Evitar!)
+        'Flow IAT Max': max(flow['iat']) if flow['iat'] else 0,  # ⚡⚡⚡
+        'Flow IAT Min': min(flow['iat']) if flow['iat'] else 0,  # ⚡⚡⚡
+        
+        # --- Subflows (Medium Cost) ---
+        'Subflow Fwd Pkts': flow['fwd_pkts'] // 10,  # Heurística simplificada
+        'Subflow Bwd Pkts': flow['bwd_pkts'] // 10,  # ⚡⚡
+        'Subflow Fwd Byts': flow['fwd_bytes'] // 10,  # ⚡⚡
+        'Subflow Bwd Byts': flow['bwd_bytes'] // 10,  # ⚡⚡
+
+        # --- Janelas TCP (Low-Medium Cost) ---
+        'Init Fwd Win Byts': pkt[TCP].window if 'TCP' in pkt else 0,  # ⚡⚡
+        'Init Bwd Win Byts': 0,  # ⚡ (Não disponível sem ver resposta)
+        
+        # --- Outras (Contextuais) ---
+        'Down/Up Ratio': flow['bwd_bytes'] / max(flow['fwd_bytes'], 1),  # ⚡⚡
+        'Active Mean': np.mean(flow['active_times']) if flow['active_times'] else 0,  # ⚡⚡⚡
+        'Idle Mean': np.mean(flow['idle_times']) if flow['idle_times'] else 0,  # ⚡⚡⚡
+        'Src Port': pkt[TCP].sport  # ⚡
+
+
+        def test_ddos_detection(self):
+        """Simula vários tipos de ataques DDoS para teste"""
+        from scapy.all import IP, TCP, UDP, ICMP
+        
+        print("\n=== INICIANDO TESTES DE DDoS ===")
+        
+        # 1. Simula SYN Flood
+        print("\n[TESTE] SYN Flood (50 SYN/s)...")
+        for _ in range(60):
+            pkt = IP(src="192.168.1.100")/TCP(flags="S", dport=80)
+            self._detect_ddos(pkt)
+        
+        # 2. Simula UDP Flood (DNS Amplification)
+        print("\n[TESTE] UDP Flood (500 pps)...")
+        for _ in range(550):
+            pkt = IP(src="10.0.0.1")/UDP(dport=53)/("X"*100)  # Payload grande
+            self._detect_ddos(pkt)
+        
+        # 3. Simula ICMP Flood (Ping Flood)
+        print("\n[TESTE] ICMP Flood (1Mbps)...")
+        for _ in range(200):
+            pkt = IP(src="172.16.0.5")/ICMP()/("X"*500)  # Pacotes grandes
+            self._detect_ddos(pkt)
+    
+    print("\n=== TESTES CONCLUÍDOS ===")
+    #--- Fim da Detecção de DDOS
+
+    class AIChooser:
+    """Seleciona e carrega o modelo de IA a ser utilizado"""
+    
+    def __init__(self, ui, model_paths=None):
+        self.ui = ui
+        self.model_paths = model_paths or {
+            0: '../Models/xgboost_model.model',
+            1: '../Models/random_forest_model.pkl'
+        }
+        self.model = None
+        self.current_model_name = None
+
+        # Conecta a UI à função de carregamento
+        self.ui.comboBox_ModeloIA.currentIndexChanged.connect(self.load_selected_model)
+        self.ui.comboBox_ModeloIA.setCurrentIndex(1)
+        self.load_selected_model()
+
+    def load_selected_model(self):
+        """Carrega o modelo selecionado com tratamento robusto de erros"""
+        try:
+            model_index = self.ui.comboBox_ModeloIA.currentIndex()
+            model_path = self.model_paths.get(model_index)
+            
+            if not model_path:
+                raise FileNotFoundError(f"Índice de modelo {model_index} não configurado")
+            
+            if not os.path.exists(model_path):
+                raise FileNotFoundError(f"Arquivo do modelo não encontrado: {model_path}")
+            
+            if model_path.endswith(".model"):
+                import xgboost as xgb
+                self.model = xgb.XGBClassifier()
+                self.model.load_model(model_path)
+            elif model_path.endswith(".pkl"):
+                import joblib
+                self.model = joblib.load(model_path)
+             
+            # Verifica se o modelo foi carregado corretamente
+            if not hasattr(self.model, 'predict'):
+                raise AttributeError("Modelo não implementa método 'predict'")
+            
+            # Registra sucesso
+            self.firewall.log_manager.add_log(
+                modulo="AIChooser",
+                evento="Modelo carregado",
+                detalhes={
+                    "modelo_path": model_path,
+                    "tipo_modelo": type(self.model).__name__
+                },
+                nivel="baixo"
+            )
+            
+            return self.model
+            
+        except Exception as e:
+            # Registra o erro detalhado
+            error_details = {
+                "model_index": model_index,
+                "model_path": model_path,
+                "sys_path": sys.path
+            }
+            
+            self.firewall.log_manager.add_error_log(
+                modulo="AIChooser",
+                erro=e,
+                detalhes=error_details
+            )
+            
+            # Mostra alerta na UI se disponível
+            if self.ui:
+                QMessageBox.critical(
+                    self.ui,
+                    "Erro de Carregamento",
+                    f"Falha ao carregar modelo:\n{str(e)}\nVerifique logs para detalhes."
+                )
+            
+            return None
+        
+    def get_current_model(self):
+        """Retorna o modelo atualmente carregado"""
+        return self.model
+    
+    def log_event(self, message, error=False):
+        """Registra eventos e mostra na UI"""
+        prefix = "[ERRO]" if error else "[INFO]"
+        print(f"{prefix} {message}")
+        if error:
+            QMessageBox.critical(None, "Erro", message)
+        else:
+            QMessageBox.information(None, "Info", message)
