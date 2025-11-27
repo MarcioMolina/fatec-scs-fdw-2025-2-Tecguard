@@ -1,0 +1,13 @@
+
+PySide6
+pandas
+numpy
+scikit-learn
+xgboost
+psutil
+pystray
+Pillow 
+reportlab
+watchdog
+requests
+pybloom-live

@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 from scapy.all import sniff, IP, TCP, UDP, Raw, get_if_list
 from scapy.layers.tls.all import TLS
 from PySide6.QtCore import QObject, Signal
-import yara
+#import yara
 import subprocess
 from pybloom_live import ScalableBloomFilter
 import os
@@ -76,160 +76,7 @@ class JSONLogger:
     def suspicious(self, event_name: str, **kwargs):
         """Log de atividade suspeita"""
         self._log(event_name, "Suspeito", **kwargs)
-
-class YaraAnalyzer:
-    """Analisador de pacotes usando regras YARA"""
-    
-    def __init__(self, firewall):
-        self.firewall = firewall
-        self._signature_cache = {}
-        self._cache_lock = threading.Lock()
-        self._init_yara_scanner()
         
-    def _init_yara_scanner(self):
-        """Inicia o motor de detecção baseado em YARA"""
-        self.yara_rules = yara.compile(source='''
-            rule BruteForce_SSH {
-                meta:
-                    description = "Tentativas de brute force SSH"
-                strings:
-                     $s1 = "Failed password for"
-                $s2 = "authentication failure"
-                $s3 = "invalid user"
-                $s4 = "connection closed by"
-                condition:
-                    any of them
-            }
-
-            rule Web_Attack {
-                strings:
-                    $sqli = /union[\\s\\+]+select/i
-                    $sqli2 = /select.*from/i
-                    $xss = /<script[\\s>]/ nocase
-                    $xss2 = /javascript:/ nocase
-                    $xss3 = /onerror=/ nocase
-                condition:
-                    any of them
-            }
-                             
-            rule DDoS_Attack_Indicators {
-                meta:
-                    description = "Detecta possíveis scripts/tools de DDoS (LOIC, HOIC, Slowloris, etc.)"
-                    severity = "critical"          
-            strings:
-                // Padrões em scripts de DDoS (Python, Bash, etc.)
-                $loic = "LOIC" nocase
-                $hoic = "HOIC" nocase
-                $slowloris = "slowloris" nocase
-                $udp_flood = "udpflood" nocase
-                $syn_flood = "synflood" nocase
-                $http_flood = "httpflood" nocase
-
-                // Strings comuns em ferramentas de DDoS
-                $target_url = "TARGET_URL"
-                $target_ip = "TARGET_IP"
-                $attack_duration = "ATTACK_DURATION"
-                $threads = "THREADS"
-
-                // Códigos maliciosos (exemplo simplificado)
-                $python_attack = "import socket"
-                $bash_attack = "hping3"
-
-            condition:
-                // Pelo menos 3 desses indicadores
-                3 of them
-        }            
-            ''')
-    
-    def analyze(self, pkt):
-        """Análise de payload com regras YARA"""
-        if not pkt.haslayer(Raw):
-            return None
-            
-        try:
-            payload = pkt[Raw].load
-            if not payload:
-                return None
-                
-            # Verifica em cache primeiro
-            payload_hash = hashlib.md5(payload).hexdigest()
-            with self._cache_lock:
-                if payload_hash in self._signature_cache:
-                    cached_result = self._signature_cache[payload_hash]
-                    if cached_result['expire'] > time.time():
-                        return cached_result['result']
-            
-            # Executa análise YARA
-            matches = self.yara_rules.match(data=payload)
-            if matches:
-                self.firewall.stats['yara_matches'] += 1
-                
-                # Classifica severidade baseada nas regras
-                severity_scores = {
-                    'critical': 100,
-                    'high': 80,
-                    'medium': 50,
-                    'low': 30
-                }
-                
-                max_score = 0
-                reasons = []
-                details = {'rules': []}
-                
-                for match in matches:
-                    rule_severity = match.meta.get('severity', 'medium').lower()
-                    score = severity_scores.get(rule_severity, 50)
-                    
-                    if score > max_score:
-                        max_score = score
-                    
-                    reasons.append(match.rule)
-                    details['rules'].append({
-                        'name': match.rule,
-                        'severity': rule_severity,
-                        'description': match.meta.get('description', '')
-                    })
-                
-                result = {
-                    'block': max_score >= 80,
-                    'reason': f"Regras YARA: {', '.join(reasons)}",
-                    'score': max_score,
-                    'details': details
-                }
-                
-                # Log do evento
-                src_ip = pkt[IP].src if pkt.haslayer(IP) else None
-                self.firewall.logger.attack(
-                    "Assinatura YARA detectada",
-                    ip=src_ip,
-                    service="Deep Packet Inspection",
-                    suggestion="Analisar payload e considerar bloqueio",
-                    additional_data={
-                        'rules': reasons,
-                        'score': max_score,
-                        'payload_hash': payload_hash
-                    }
-                )
-                
-                # Cache resultado por 1 hora
-                with self._cache_lock:
-                    self._signature_cache[payload_hash] = {
-                        'result': result,
-                        'expire': time.time() + 3600
-                    }
-                    
-                return result
-                
-        except Exception as e:
-            self.firewall.logger.error(
-                "Erro na análise YARA",
-                service="YaraAnalyzer",
-                suggestion="Verificar integridade das regras YARA",
-                additional_data={'error': str(e)}
-            )
-            
-        return None
-
 class JA3Analyzer:
     """Analisador de fingerprints TLS com JA3"""
     
@@ -814,7 +661,7 @@ class AnalysisPipeline:
         self.firewall = firewall
         
         # Inicializa os analisadores
-        self.yara_analyzer = YaraAnalyzer(firewall)
+        #self.yara_analyzer = YaraAnalyzer(firewall)
         self.ja3_analyzer = JA3Analyzer(firewall)
         self.statistical_analyzer = StatisticalAnalyzer(firewall)
         
@@ -831,7 +678,7 @@ class AnalysisPipeline:
             self._check_blocked_ips,
             self.statistical_analyzer.analyze,
             self.ja3_analyzer.analyze,
-            self.yara_analyzer.analyze
+           # self.yara_analyzer.analyze
         ]
         
         # Adiciona o analisador de IA apenas se estiver disponível
