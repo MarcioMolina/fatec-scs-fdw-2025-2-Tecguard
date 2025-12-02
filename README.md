@@ -4,7 +4,7 @@ Bem-vindo ao repositório oficial do projeto Tecguard, uma solução Firewall Ne
 
 ## 🚀 Links Rápidos
 
-- **🎥 Vídeo de Demonstração:** [Assista no YouTube](https://youtu.be/ZpDPswaqPdQ)
+- **🎥 Vídeo de Demonstração:** [Assista no YouTube](https://youtu.be/nQzkEFR5X2o)
 - **🐳 Imagem Docker:** [Baixe no Docker Hub](https://hub.docker.com/r/marcio55/tecguard-app)
 
 ## 📄 Documentação e Relatórios
